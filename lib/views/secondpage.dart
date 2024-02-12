@@ -33,7 +33,7 @@ class SecondPage extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            "The image picked by you is and the path is $imagepath",
+            "The image path is $imagepath",
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 8),
