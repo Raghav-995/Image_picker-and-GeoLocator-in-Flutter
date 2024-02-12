@@ -1,0 +1,10 @@
+^E:\FLUTTER_PROJECTS\INTERN_PROJECTS\ASSIGNMENT2\ASSIGN2\BUILD\WINDOWS\X64\_DEPS\NUGET-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/Flutter_projects/Intern_Projects/assignment2/assign2/build/windows/x64/_deps/nuget-subbuild -BE:/Flutter_projects/Intern_Projects/assignment2/assign2/build/windows/x64/_deps/nuget-subbuild --check-stamp-file E:/Flutter_projects/Intern_Projects/assignment2/assign2/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

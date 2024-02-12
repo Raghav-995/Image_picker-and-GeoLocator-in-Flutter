@@ -1,0 +1,89 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter debug_adapter
+
+## exception
+
+RPCError: resume: (-32603) Unexpected DWDS error for resume: Invalid argument(s): FrameIndex is currently unsupported.
+
+```
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:265:34)
+#1      VmService._call.<anonymous closure> (package:vm_service/src/vm_service.dart:1771:25)
+#2      VmService._call (package:vm_service/src/vm_service.dart:1783:8)
+#3      VmService.resume (package:vm_service/src/vm_service.dart:1484:7)
+#4      IsolateManager._resume (package:dds/src/dap/isolate_manager.dart:347:33)
+#5      IsolateManager.rewindThread (package:dds/src/dap/isolate_manager.dart:289:5)
+#6      DartDebugAdapter.restartFrameRequest (package:dds/src/dap/adapters/dart.dart:1322:26)
+#7      BaseDebugAdapter._withVoidResponse.<anonymous closure> (package:dds/src/dap/base_debug_adapter.dart:508:51)
+#8      BaseDebugAdapter.handle (package:dds/src/dap/base_debug_adapter.dart:141:20)
+#9      BaseDebugAdapter.handleIncomingRequest (package:dds/src/dap/base_debug_adapter.dart:418:7)
+#10     BaseDebugAdapter._handleIncomingMessage (package:dds/src/dap/base_debug_adapter.dart:301:7)
+#11     ByteStreamServerChannel._readMessage (package:dds/src/dap/protocol_stream.dart:82:18)
+#12     ByteStreamServerChannel.listen.<anonymous closure> (package:dds/src/dap/protocol_stream.dart:53:24)
+#13     _rootRunUnary (dart:async/zone.dart:1407:47)
+#14     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#15     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#16     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:339:11)
+#17     _DelayedData.perform (dart:async/stream_impl.dart:515:14)
+#18     _PendingEvents.handleNext (dart:async/stream_impl.dart:620:11)
+#19     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:591:7)
+#20     _rootRun (dart:async/zone.dart:1391:47)
+#21     _CustomZone.run (dart:async/zone.dart:1301:19)
+#22     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#23     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#24     _rootRun (dart:async/zone.dart:1399:13)
+#25     _CustomZone.run (dart:async/zone.dart:1301:19)
+#26     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#27     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#28     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#29     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#30     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#31     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 3.17.0-0.0.pre, on Microsoft Windows [Version 10.0.19045.3930], locale en-US)
+    • Flutter version 3.17.0-0.0.pre on channel beta at E:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 0b591f2c82 (3 months ago), 2023-11-02 22:01:10 -0400
+    • Engine revision dff66925dc
+    • Dart version 3.3.0 (build 3.3.0-91.0.dev)
+    • DevTools version 2.29.0
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at E:\Android
+    • Platform android-34, build-tools 34.0.0
+    • ANDROID_SDK_ROOT = E:\Android
+    • Java binary at: C:\Program Files\Java\jdk-17\bin\java
+    • Java version Java(TM) SE Runtime Environment (build 17.0.9+11-LTS-201)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.7.4)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.7.34031.279
+    • Windows 10 SDK version 10.0.22621.0
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19045.3930]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 121.0.6167.161
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 121.0.2277.83 (unsupported)
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```
