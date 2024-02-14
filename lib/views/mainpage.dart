@@ -13,7 +13,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Text('GetX Image_Viewer'),
+        title: const Text('GetX Image_Viewer with Camera'),
       ),
       body: SingleChildScrollView(
         child: Center(
